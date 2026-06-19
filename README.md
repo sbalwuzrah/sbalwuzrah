@@ -57,5 +57,5 @@ Final-year Information Technology student at **Imam Mohammad Ibn Saud Islamic Un
 ---
 
 <p align="center">
-  <a href="cv.html">View My Resume</a>
+  <a href="cv.pdf">Download My Resume (PDF)</a>
 </p>
