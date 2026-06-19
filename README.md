@@ -44,8 +44,6 @@ Final-year Information Technology student at **Imam Mohammad Ibn Saud Islamic Un
 
 - Completing my Bachelor's in Information Technology at IMSIU (final year)
 - Seeking a **Co-op internship** in cybersecurity / Blue Team operations
-- Working toward CompTIA Security+ certification
-- Exploring CTF challenges to sharpen practical skills
 
 ---
 
