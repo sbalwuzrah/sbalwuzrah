@@ -34,9 +34,9 @@ Final-year Information Technology student at **Imam Mohammad Ibn Saud Islamic Un
 
 ### What I'm Focused On
 
-- **Network Analysis** â€” Studying deep packet inspection and traffic monitoring using Wireshark to detect suspicious activity
-- **Blue Team Defense** â€” Learning firewall configuration, IDS/IPS, and SIEM event management
-- **Incident Response** â€” Building knowledge in detecting, analyzing, and responding to security incidents
+- **Network Analysis** — Studying deep packet inspection and traffic monitoring using Wireshark to detect suspicious activity
+- **Blue Team Defense** — Learning firewall configuration, IDS/IPS, and SIEM event management
+- **Incident Response** — Building knowledge in detecting, analyzing, and responding to security incidents
 
 ---
 
@@ -57,5 +57,5 @@ Final-year Information Technology student at **Imam Mohammad Ibn Saud Islamic Un
 ---
 
 <p align="center">
-  <a href="Saad%20ALwuzrah%20co-op.pdf">Download My Resume (PDF)</a>
+  <a href="cv.html">View My Resume</a>
 </p>
