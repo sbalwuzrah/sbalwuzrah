@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad ALwuzrah — CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            padding: 50px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #7ec8e3;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .header .objective {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: #c8d6e5;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #b0c4d8;
+        }
+
+        .contact-item svg {
+            width: 16px;
+            height: 16px;
+            fill: #7ec8e3;
+            flex-shrink: 0;
+        }
+
+        .contact-item a {
+            color: #b0c4d8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover { color: #fff; }
+
+        /* Body */
+        .body {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 0;
+        }
+
+        .main { padding: 40px 50px; }
+        .sidebar {
+            background: #f7f9fb;
+            padding: 40px 30px;
+            border-left: 1px solid #eaeef3;
+        }
+
+        /* Sections */
+        .section { margin-bottom: 36px; }
+
+        .section-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #2c5364;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c5364;
+            display: inline-block;
+        }
+
+        /* Education */
+        .edu-item { margin-bottom: 16px; }
+
+        .edu-item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .edu-item .school {
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        .edu-item .date {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 20px;
+        }
+
+        .skill-category h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #203a43;
+            margin-bottom: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #e8f4f8;
+            color: #2c5364;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #2c5364;
+            color: #fff;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 20px;
+            padding: 18px;
+            background: #f7f9fb;
+            border-radius: 8px;
+            border-left: 3px solid #2c5364;
+        }
+
+        .project-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+
+        .project-item p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .project-tech span {
+            background: #dce9f0;
+            color: #2c5364;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Certifications */
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .cert-icon {
+            width: 20px;
+            height: 20px;
+            background: #2c5364;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .cert-icon svg {
+            width: 10px;
+            height: 10px;
+            fill: #fff;
+        }
+
+        .cert-info h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .cert-info p {
+            font-size: 0.78rem;
+            color: #888;
+        }
+
+        /* Soft Skills */
+        .soft-skill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #444;
+        }
+
+        .soft-skill::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #2c5364;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Languages */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .lang-name {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1a1a2e;
+        }
+
+        .lang-level {
+            display: flex;
+            gap: 4px;
+        }
+
+        .lang-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #dce9f0;
+        }
+
+        .lang-dot.filled { background: #2c5364; }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                border-radius: 0;
+            }
+            .skill-tag:hover {
+                background: #e8f4f8;
+                color: #2c5364;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .body {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid #eaeef3;
+            }
+            .header { padding: 30px; }
+            .main { padding: 30px; }
+            .header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Saad ALwuzrah</h1>
+            <div class="subtitle">Cybersecurity &amp; IT Engineer</div>
+            <p class="objective">
+                Final-year IT student at IMSIU specializing in Blue Team cybersecurity. Skilled in network traffic analysis, threat detection, and defensive security infrastructure. Seeking a co-op opportunity to apply hands-on experience in packet analysis, SIEM monitoring, and incident response.
+            </p>
+            <div class="contact-bar">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>0558316890</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <a href="mailto:s.b.alwuzrah@gmail.com">s.b.alwuzrah@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <a href="https://github.com/sbalwuzrah">github.com/sbalwuzrah</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <a href="https://www.linkedin.com/in/saad-alwuzrah-86306b411">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <!-- Main Content -->
+            <div class="main">
+                <!-- Education -->
+                <div class="section">
+                    <div class="section-title">Education</div>
+                    <div class="edu-item">
+                        <h3>Bachelor of Information Technology</h3>
+                        <div class="school">Imam Mohammad Ibn Saud Islamic University (IMSIU)</div>
+                        <div class="date">Expected Graduation: 2026</div>
+                    </div>
+                </div>
+
+                <!-- Areas of Focus -->
+                <div class="section">
+                    <div class="section-title">Areas of Focus</div>
+
+                    <div class="project-item">
+                        <h3>Network Traffic Analysis</h3>
+                        <p>Analyzing network packets and traffic patterns using Wireshark to detect anomalies, trace data paths, and investigate suspicious activity across protocols like TCP/IP, DNS, and HTTP/S.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Blue Team &amp; Cyber Defense</h3>
+                        <p>Studying defensive security strategies including firewall rule design, intrusion detection/prevention systems (IDS/IPS), and SIEM-based event monitoring for proactive threat detection.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Incident Response</h3>
+                        <p>Building knowledge in identifying, analyzing, and responding to security incidents — from initial detection through containment and post-incident documentation.</p>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="section">
+                    <div class="section-title">Technical Skills</div>
+
+                    <div class="skill-category">
+                        <h4>Blue Team &amp; Defense</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Firewalls</span>
+                            <span class="skill-tag">IDS / IPS</span>
+                            <span class="skill-tag">SIEM</span>
+                            <span class="skill-tag">Incident Response</span>
+                            <span class="skill-tag">Threat Detection</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Network Analysis</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Packet Analysis</span>
+                            <span class="skill-tag">TCP/IP</span>
+                            <span class="skill-tag">DNS</span>
+                            <span class="skill-tag">HTTP/S</span>
+                            <span class="skill-tag">Traffic Monitoring</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Tools &amp; Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Windows Server</span>
+                            <span class="skill-tag">Nmap</span>
+                            <span class="skill-tag">VirtualBox / VMware</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Goals -->
+                <div class="section">
+                    <div class="section-title">Goals</div>
+                    <div class="soft-skill">Obtain CompTIA Security+</div>
+                    <div class="soft-skill">Complete hands-on CTF challenges</div>
+                    <div class="soft-skill">Build a home security lab</div>
+                    <div class="soft-skill">Gain real-world SOC experience</div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="section">
+                    <div class="section-title">Soft Skills</div>
+                    <div class="soft-skill">Analytical Thinking</div>
+                    <div class="soft-skill">Problem Solving</div>
+                    <div class="soft-skill">Team Collaboration</div>
+                    <div class="soft-skill">Attention to Detail</div>
+                    <div class="soft-skill">Continuous Self-Learning</div>
+                    <div class="soft-skill">Effective Communication</div>
+                </div>
+
+                <!-- Languages -->
+                <div class="section">
+                    <div class="section-title">Languages</div>
+
+                    <div class="lang-item">
+                        <span class="lang-name">Arabic</span>
+                        <div class="lang-level">
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                        </div>
+                    </div>
+
+                    <div class="lang-item">
+                        <span class="lang-name">English</span>
+                        <div class="lang-level">
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot filled"></div>
+                            <div class="lang-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="section">
+                    <div class="section-title">Interests</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CTF Challenges</span>
+                        <span class="skill-tag">Threat Intel</span>
+                        <span class="skill-tag">Network Forensics</span>
+                        <span class="skill-tag">Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
